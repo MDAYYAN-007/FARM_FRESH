@@ -103,4 +103,3 @@ Feel free to fork the repository, make improvements, and submit pull requests.
 - [JWT](https://jwt.io/)
 - [bcrypt](https://www.npmjs.com/package/bcrypt)
 - [EJS](https://www.npmjs.com/package/ejs)
-```
