@@ -95,10 +95,6 @@ This application is a recipe management system using Express.js, PostgreSQL, Pas
 
 Feel free to fork the repository, make improvements, and submit pull requests.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgements
 
 - [Express.js](https://expressjs.com/)
