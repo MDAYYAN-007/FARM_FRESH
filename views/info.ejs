@@ -1,0 +1,127 @@
+<%- include("partials/header.ejs") %>
+<section class="mt-28">
+  <div class="container mx-auto py-8 flex">
+      <!-- Sidebar -->
+      <div class="w-1/4 bg-white shadow-md rounded-lg p-4 mr-8 fixed right-0">
+        <h2 class="text-xl font-semibold mb-4">Agenda</h2>
+        <div class="flex flex-col">
+          <button class="tab-link text-left p-2 mb-2 bg-green-100 hover:bg-green-200 rounded focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50" onclick="openTab(event, 'tab1')">Introduction</button>
+          <button class="tab-link text-left p-2 mb-2 bg-green-100 hover:bg-green-200 rounded focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50" onclick="openTab(event, 'tab2')">Sustainable Farming</button>
+          <button class="tab-link text-left p-2 mb-2 bg-green-100 hover:bg-green-200 rounded focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50" onclick="openTab(event, 'tab3')">Improvised methods of farming</button>
+          <button class="tab-link text-left p-2 mb-2 bg-green-100 hover:bg-green-200 rounded focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50" onclick="openTab(event, 'tab4')">Robotics and Automation</button>
+          <button class="tab-link text-left p-2 mb-2 bg-green-100 hover:bg-green-200 rounded focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50" onclick="openTab(event, 'tab5')">Biotechnology and Genetic Engineering </button>
+          <button class="tab-link text-left p-2 mb-2 bg-green-100 hover:bg-green-200 rounded focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50" onclick="openTab(event, 'tab6')">Seasonal Crops</button>
+          <button class="tab-link text-left p-2 mb-2 bg-green-100 hover:bg-green-200 rounded focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50" onclick="openTab(event, 'tab7')">Logistics Management</button>
+        </div>
+      </div>
+  
+      <!-- Tab Content -->
+      <div class="w-3/4">
+        <!-- Tab 1 -->
+        <div id="tab1" class="tab-content active">
+          <h2 class="text-2xl font-bold mb-4">Introduction</h2>
+          <p class="text-gray-700 mb-4">Welcome to our information page! Here you will find a range of topics related to sustainable agriculture, organic farming practices, and more. Our mission is to support farmers and promote environmentally friendly methods of farming.</p>
+        </div>
+        
+        <!-- Tab 2 -->
+        <div id="tab2" class="tab-content">
+          <h2 class="text-2xl font-bold mb-4">Sustainable Farming</h2>
+          <p class="text-gray-700 mb-4">Sustainable farming, also known as sustainable agriculture, is an approach to farming that seeks to balance the need for food production with the preservation of environmental quality and the well-being of farming communities. It focuses on practices that maintain or enhance the health of ecosystems, reduce dependency on non-renewable resources, and promote biodiversity. Sustainable farming techniques include crop rotation, organic fertilization, integrated pest management, and conservation tillage. These methods help to improve soil health, reduce water and air pollution, and support wildlife habitats. Additionally, sustainable farming aims to create resilient agricultural systems that can adapt to changing climate conditions while providing fair economic opportunities for farmers. By adopting these practices, sustainable farming strives to meet current food needs without compromising the ability of future generations to meet theirs.</p>
+        </div>
+        
+        <!-- Tab 3 -->
+        <div id="tab3" class="tab-content">
+          <h2 class="text-2xl font-bold mb-4">Improvised methods of farming</h2>
+          <p class="text-gray-700 mb-4">Improvised methods of farming often refer to innovative or alternative techniques that aim to increase efficiency, sustainability, or productivity in agriculture. Here are some examples:
+          <ul class="list-disc">
+            <li>Vertical Farming: This involves growing crops in vertically stacked layers, often in controlled environments like skyscrapers or shipping containers. It maximizes space utilization and allows for efficient use of resources like water and nutrients.
+          </li>
+          <li>
+            Agroforestry: Agroforestry integrates trees and shrubs into agricultural systems, providing multiple benefits such as improved soil fertility, biodiversity, and carbon sequestration. It can also provide additional products like fruits, nuts, and timber.
+          </li>
+          <li>
+            Integrated Pest Management (IPM): IPM combines biological, cultural, physical, and chemical methods to manage pests effectively while minimizing economic, health, and environmental risks.
+          </li>
+          </ul>
+          </p>
+        </div>
+        
+        <!-- Tab 4 -->
+        <div id="tab4" class="tab-content">
+          <h2 class="text-2xl font-bold mb-4"> Robotics and Automation</h2>
+          <p class="text-gray-700 mb-4">
+             Robotics and automation are transforming agriculture by increasing efficiency, precision, and sustainability in farming practices. These technologies involve the use of robots, sensors, and automated systems to perform tasks that were traditionally done by humans. In agriculture, robotics and automation are applied in various ways to enhance productivity and reduce labor costs.
+          </p>
+          <p class="text-gray-700 mb-4">
+              Robotic systems can automate repetitive tasks such as planting, weeding, and harvesting. For example, autonomous tractors and drones are used for planting seeds, monitoring crop health, and applying fertilizers and pesticides. These robots are equipped with advanced sensors and imaging technologies that enable them to perform tasks with high accuracy and consistency. Automated harvesters can pick fruits and vegetables at optimal ripeness, reducing waste and ensuring better yields.
+          </p>
+          <p class="text-gray-700 mb-4">
+            In addition to physical tasks, automation in agriculture also includes the use of data-driven technologies to make informed decisions. Precision agriculture technologies, such as GPS-guided equipment and soil moisture sensors, help farmers optimize resource use and manage crops more effectively. These technologies provide real-time data on soil conditions, weather patterns, and crop health, enabling farmers to make precise adjustments to improve yields and reduce environmental impact.
+
+            Overall, robotics and automation in agriculture contribute to more efficient farming practices, increased crop yields, and reduced environmental footprints, paving the way for a more sustainable and productive agricultural future.
+          </p>
+        </div>
+
+        <div id="tab5" class="tab-content">
+          <h2 class="text-2xl font-bold mb-6"> Biotechnology and Genetic Engineering
+          </h2>
+          <p class="text-gray-700 mb-4">
+           In agriculture, biotechnology and genetic engineering are pivotal in developing innovative solutions to enhance crop production, improve food security, and promote sustainable farming practices. These advanced technologies leverage biological processes to create crops with desirable traits that address various agricultural challenges.
+          </p>
+          <p class="text-gray-700 mb-4">
+            Biotechnology in agriculture encompasses a range of techniques and tools, including tissue culture, genetic modification, and molecular markers. Through these methods, scientists can develop crops with improved traits such as increased resistance to pests and diseases, better tolerance to environmental stresses, and enhanced nutritional content. For example, biotechnological techniques like genetic modification have led to the creation of genetically modified (GM) crops such as Bt corn and Roundup Ready soybeans. Bt corn produces a protein that is toxic to specific insect pests, reducing the need for chemical pesticides, while Roundup Ready soybeans are engineered to tolerate glyphosate herbicide, simplifying weed management.
+          </p>
+          <p class="text-gray-700 mb-4">
+            Genetic Engineering, a subset of biotechnology, involves directly modifying an organism’s DNA to introduce new traits or enhance existing ones. In agriculture, genetic engineering has enabled the development of crops with traits such as drought resistance, improved nutrient uptake, and enhanced growth rates. Techniques like CRISPR-Cas9 gene editing allow for precise changes to an organism’s genome, offering the potential to create crops that can withstand harsh conditions and require fewer inputs. For instance, scientists have engineered drought-resistant wheat varieties that maintain high yields even in water-scarce conditions.
+          </p>
+          <p class="text-gray-700 mb-4">
+            Both biotechnology and genetic engineering also contribute to sustainable agriculture by reducing the reliance on chemical inputs, improving resource efficiency, and supporting conservation efforts. These technologies enable the development of crops that use water and nutrients more efficiently, which can lead to reduced environmental impacts and better resource management.
+
+            Overall, biotechnology and genetic engineering are at the forefront of agricultural innovation, offering tools and techniques that address key challenges in modern farming and help create a more resilient and sustainable food system.
+          </p>
+        </div>
+        <div id="tab6" class="tab-content">
+          <h2 class="text-2xl font-bold mb-4">Seasonal Crops</h2>
+          <p class="text-gray-700 mb-4">Seasonal crops are plants cultivated according to the specific times of the year when their growing conditions are optimal, aligning with natural temperature fluctuations and weather patterns. These crops are categorized into warm-season and cool-season varieties, each thriving in different temperature ranges. Warm-season crops, such as tomatoes and corn, are planted after the last frost of spring and harvested in the summer, while cool-season crops, like lettuce and broccoli, are grown in the spring or fall when temperatures are cooler. Growing crops seasonally allows farmers to optimize plant growth, manage resources more efficiently, and reduce pest and disease pressures. By understanding and leveraging seasonal cycles, farmers can enhance crop yields, promote soil health through effective crop rotations, and meet market demands for fresh produce, all of which contribute to a more sustainable and productive agricultural system.
+          </p>
+        </div>
+        <div id="tab7" class="tab-content">
+          <h2 class="text-2xl font-bold mb-4">Logistics Management</h2>
+          <p class="text-gray-700 mb-4">Effective logistics management plays a critical role in minimizing food waste and ensuring efficient distribution within the food supply chain. This discipline encompasses a range of strategies and practices designed to optimize the flow of food products from producers to consumers while reducing waste and increasing efficiency. Central to successful logistics management is the implementation of advanced technologies, such as real-time tracking systems and predictive analytics, which help monitor the movement of food products and manage inventory levels effectively. These technologies enable businesses to anticipate demand, adjust supply chains in response to market conditions, and prevent overstocking or shortages that can lead to food spoilage.</p>
+        </div>
+      </div>
+    </div>
+</section>
+<footer class="h-9 bg-green-500 text-white">
+  <div class="container relative top-1 px-4 max-w-full">
+    <div class="mt-6 text-center text-base">
+      <p>&copy; 2024 FarmFresh. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // JavaScript for vertical tabs
+  function openTab(evt, tabName) {
+    // Hide all tab content
+    const tabs = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => tab.classList.remove('active'));
+
+    // Remove active class from all tab links
+    const tabLinks = document.querySelectorAll('.tab-link');
+    tabLinks.forEach(link => link.classList.remove('bg-green-200', 'text-gray-800'));
+
+    // Show the current tab
+    document.getElementById(tabName).classList.add('active');
+
+    // Add active class to the clicked tab link
+    evt.currentTarget.classList.add('bg-green-200', 'text-gray-800');
+  }
+  
+  // Set default tab
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.tab-link').click();
+  });
+</script>
+</body>
+</html>

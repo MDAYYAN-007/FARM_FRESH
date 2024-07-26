@@ -1,0 +1,76 @@
+<%- include("partials/header.ejs") %>
+<section class="mt-32">
+  <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mt-6 p-6">
+    <h2 class="text-2xl font-semibold mb-4 text-center">Sell Your Products</h2>
+    <p class="text-gray-700 mb-6 text-center">Fill out the form below to list your products for sale on our platform.</p>
+    <form action="/submit-product" method="POST" class="space-y-4">
+      <div>
+        <label for="productName" class="block text-sm font-medium text-gray-700">Product Name</label>
+        <input type="text" id="productName" name="productName" placeholder="Enter the product name" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 sm:text-sm">
+      </div>
+      <div>
+        <label for="price" class="block text-sm font-medium text-gray-700">Price</label>
+        <input type="number" id="price" name="price" placeholder="Enter the price" step="0.01" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 sm:text-sm">
+      </div>
+      <div>
+        <label for="location" class="block text-sm font-medium text-gray-700">Location</label>
+        <input type="text" id="location" name="location" placeholder="Enter the location" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 sm:text-sm">
+      </div>
+      <div>
+        <label for="productType" class="block text-sm font-medium text-gray-700">Product Type</label>
+        <select id="productType" name="productType" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 sm:text-sm">
+          <option value="" disabled selected>Select product type</option>
+          <option value="fruits">Fruits</option>
+          <option value="vegetables">Vegetables</option>
+          <option value="grains">Grains</option>
+        </select>
+      </div>
+      <div>
+        <label for="state" class="block text-sm font-medium text-gray-700">State</label>
+        <select id="state" name="state" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 sm:text-sm">
+          <option value="" disabled selected>Select state</option>
+          <option value="Bagalkot">Bagalkot</option>
+          <option value="Ballari">Ballari</option>
+          <option value="Belagavi">Belagavi</option>
+          <option value="Bengaluru Rural">Bengaluru Rural</option>
+          <option value="Bengaluru Urban">Bengaluru Urban</option>
+          <option value="Bidar">Bidar</option>
+          <option value="Chamarajanagar">Chamarajanagar</option>
+          <option value="Chikkaballapur">Chikkaballapur</option>
+          <option value="Chikkamagaluru">Chikkamagaluru</option>
+          <option value="Chitradurga">Chitradurga</option>
+          <option value="Dakshina Kannada">Dakshina Kannada</option>
+          <option value="Davanagere">Davanagere</option>
+          <option value="Dharwad">Dharwad</option>
+          <option value="Gadag">Gadag</option>
+          <option value="Hassan">Hassan</option>
+          <option value="Haveri">Haveri</option>
+          <option value="Kalaburagi">Kalaburagi</option>
+          <option value="Kodagu">Kodagu</option>
+          <option value="Kolar">Kolar</option>
+          <option value="Koppal">Koppal</option>
+          <option value="Mandya">Mandya</option>
+          <option value="Mysuru">Mysuru</option>
+          <option value="Raichur">Raichur</option>
+          <option value="Ramanagara">Ramanagara</option>
+          <option value="Shivamogga">Shivamogga</option>
+          <option value="Tumakuru">Tumakuru</option>
+          <option value="Udupi">Udupi</option>
+          <option value="Uttara Kannada">Uttara Kannada</option>
+          <option value="Vijayapura">Vijayapura</option>
+          <option value="Yadgir">Yadgir</option>
+        </select>
+      </div>
+      <div>
+        <label for="description" class="block text-sm font-medium text-gray-700">Product Description</label>
+        <textarea id="description" name="description" rows="4" placeholder="Enter a brief description of the product" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 sm:text-sm"></textarea>
+      </div>
+      <div>
+        <button type="submit" class="bg-green-500 text-white font-bold py-2 px-4 rounded hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+<section class="mt-28">
+    <div class="container mx-auto mt-8 p-4 max-w-md">
+      <form action="/register" method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <h1 class="text-2xl font-bold mb-6 text-center">Sign In</h1>
+        <div class="mb-4">
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="email" placeholder="Enter your email" required name="username">
+        </div>
+        <div class="mb-6">
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="password" placeholder="Enter your password" required name="password">
+        </div>
+        <div class="flex items-center justify-between">
+          <button class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Register</button>
+        </div>
+        <div class="mt-6 text-center">
+          <div class="google-container">
+            <a href="/auth/google" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded inline-flex items-center">
+              <img src="/images/google-icon.png" alt="Google Icon" class="w-4 h-4 mr-2">
+              <p>Signup Using Google</p>
+            </a>
+          </div>
+        </div>
+        <p class="mt-6 text-center">Already have an account? <a href="/login" class="text-green-700 hover:text-green-800">Login here</a></p>
+      </form>
+    </div>
+  </section>
+<%- include("partials/footer.ejs") %>

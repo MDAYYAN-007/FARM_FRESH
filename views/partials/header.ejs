@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/output.css" rel="stylesheet">
+    <style>
+      .bg-custom {
+        background-size: cover;
+        background-position: center;
+      }
+
+      .bg-cover {
+        background-image: url('/images/imagebg.jpg');
+        background-size: cover;
+        background-position: center;
+      }
+
+    </style>
+    <title>FarmFresh</title>
+</head>
+<body>
+  <nav class="bg-green-500 py-6 text-white fixed top-0 w-full z-20">
+    <div class="container mx-auto px-2">
+      <div class="flex flex-col items-center justify-between md:flex-row">
+        <div class="mb-4 md:mb-0">
+          <h1 class="text-2xl font-bold"><a href="/">FarmFresh</a></h1>
+          <p class="mt-2 text-sm">Promoting sustainable agriculture and local farming.</p>
+        </div>
+        <div class="flex space-x-4 text-xl items-center">
+          <a href="/" class="text-white hover:text-green-300 px-2">Home</a>
+          <a href="/my-products" class="text-white hover:text-green-300 px-2">My Products</a>
+          <div class="relative group z-20">
+            <button id="dropdownButton" class="text-white hover:text-green-300 focus:outline-none px-2">Menu</button>
+            <div class="dropdown-menu absolute right-0 w-48 bg-white text-black rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible transition-opacity duration-300 invisible">
+              <a href="/buy" class="block px-4 py-2 text-gray-800 hover:bg-green-700 hover:rounded-tl-md hover:rounded-tr-md hover:text-white">Buy</a>
+              <a href="/sell" class="block px-4 py-2 text-gray-800 hover:bg-green-700 hover:text-white">Sell</a>
+              <a href="/info" class="block px-4 py-2 text-gray-800 hover:bg-green-700 hover:text-white">Info</a>
+              <a href="/crop-safety" class="block px-4 py-2 text-gray-800 hover:bg-green-700 hover:rounded-bl-md hover:rounded-br-md hover:text-white">Crop Safety</a>
+            </div>
+          </div>          
+          <a href="/about" class="text-white hover:text-green-300 px-2">About Us</a>
+          <a href="/cart" class="text-white hover:text-green-300 px-2">Cart</a>
+          <a href="/logout" class="text-white hover:text-green-300 px-2">Logout</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  

@@ -1,0 +1,29 @@
+<%- include("partials/header.ejs") %>  
+
+<section class="mt-32">
+    <div class="container mx-auto py-8">
+        <h1 class="text-3xl font-bold text-center mb-8">Shopping Cart</h1>
+        
+        <!-- Cart Items -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <% cartItems.forEach(item => { %>
+            <div class="bg-white shadow-lg rounded-lg p-6">
+              <h2 class="text-xl font-semibold mb-2"><%= item.product_name %></h2>
+              <p class="text-gray-700 mb-4">Quantity: <span id="cart-quantity-<%= item.product_id %>"><%= item.quantity %></span></p>
+              <p class="text-gray-700 mb-4">Total Cost: $<span><%= Number(item.total_cost).toFixed(2) %></span></p>
+              <form action="/remove-from-cart/<%= item.product_id %>" method="post">
+                <button type="submit" class="bg-red-500 text-white font-bold py-2 px-4 rounded hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-50">Remove</button>
+              </form>
+            </div>
+          <% }); %>
+        </div>
+        
+        <!-- Total Price -->
+        <div class="mt-8 text-center">
+          <h2 class="text-2xl font-bold mb-2">Total: $<span id="total-price"><%= totalPrice.toFixed(2) %></span></h2>
+          <a href="#" class="bg-green-500 text-white font-bold py-2 px-4 rounded hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-50">Checkout</a>
+        </div>
+      </div>
+</section>
+
+<%- include("partials/footer.ejs") %>  
