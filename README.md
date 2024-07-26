@@ -1,6 +1,3 @@
-Sure, here's the `README.md` in a copyable format:
-
-```markdown
 # Express.js Recipe Management Application
 
 ## Overview
