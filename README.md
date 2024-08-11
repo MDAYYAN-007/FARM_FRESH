@@ -1,105 +1,103 @@
-# Express.js Recipe Management Application
+# Farm-to-Table Express Application
 
-## Overview
-
-This application is a recipe management system using Express.js, PostgreSQL, Passport.js for authentication, and JWT for secure user sessions. It allows users to register, log in, and manage their products including fruits, vegetables, and grains. Users can add items to their cart and manage their product listings.
+This project is an Express application that allows users to manage products and cart items. Users can sign up, log in, view products, add products to their cart, and view their cart.
 
 ## Features
 
-- User registration and login with password hashing
-- Google OAuth 2.0 for authentication
-- JWT-based session management
-- CRUD operations for products
-- Cart functionality to manage product purchases
-- Secure handling of user sessions and data
+- User Authentication (Sign Up, Log In)
+- Product Management (Add, View)
+- Cart Management (Add Items to Cart, View Cart)
+- Uses PostgreSQL for data storage
+- Session management with `express-session`
 
-## Technologies Used
-
-- **Express.js**: Web framework for Node.js
-- **PostgreSQL**: Database for storing user and product data
-- **Passport.js**: Authentication middleware
-- **JWT (JSON Web Tokens)**: Token-based authentication
-- **bcrypt**: Password hashing
-- **EJS**: Templating engine for rendering views
-
-## Getting Started
-
-### Prerequisites
+## Prerequisites
 
 - Node.js
 - PostgreSQL
-- Google Developer credentials (for Google OAuth)
 
-### Installation
+## Getting Started
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/MDAYYAN-007/your-repo.git
-   cd your-repo
+### Clone the repository
+
+```bash
+git clone https://github.com/yourusername/https://github.com/MDAYYAN-007/FARM_FRESH.git
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Database Setup
+
+1. **Create Database and Tables**
+
+   Connect to your PostgreSQL database and run the following SQL queries to create the necessary tables:
+
+   ```sql
+   CREATE TABLE users (
+     id SERIAL PRIMARY KEY,
+     email VARCHAR(255) UNIQUE NOT NULL,
+     password VARCHAR(255) NOT NULL
+   );
+
+   CREATE TABLE products (
+     id SERIAL PRIMARY KEY,
+     product_name VARCHAR(255) NOT NULL,
+     price DECIMAL(10, 2) NOT NULL,
+     location VARCHAR(255) NOT NULL,
+     product_type VARCHAR(50) NOT NULL,
+     description TEXT NOT NULL,
+     user_id INTEGER REFERENCES users(id) ON DELETE CASCADE
+   );
+
+   CREATE TABLE cart_items (
+     id SERIAL PRIMARY KEY,
+     product_id INTEGER REFERENCES products(id) ON DELETE CASCADE,
+     product_name VARCHAR(255) NOT NULL,
+     product_description TEXT NOT NULL,
+     quantity INTEGER NOT NULL,
+     product_price DECIMAL(10, 2) NOT NULL,
+     total_cost DECIMAL(10, 2) NOT NULL,
+     user_id INTEGER REFERENCES users(id) ON DELETE CASCADE
+   );
    ```
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+### Environment Variables
 
-3. Set up environment variables:
-   Create a `.env` file in the root directory with the following content:
-   ```plaintext
-   PG_USER=your_pg_user
-   PG_HOST=localhost
-   PG_DATABASE=your_db_name
-   PG_PASSWORD=your_pg_password
-   PG_PORT=5432
-   SESSION_SECRET=your_session_secret
-   JWT_SECRET=your_jwt_secret
-   GOOGLE_CLIENT_ID=your_google_client_id
-   GOOGLE_CLIENT_SECRET=your_google_client_secret
-   ```
+Create a `.env` file in the root directory and add your PostgreSQL connection details:
 
-4. Run database migrations:
-   Make sure your PostgreSQL database is set up with the required tables and schemas.
+```
+DATABASE_URL=postgres://yourusername:yourpassword@localhost:5432/yourdatabase
+SESSION_SECRET=your_session_secret
+```
 
-5. Start the server:
-   ```bash
-   npm start
-   ```
+### Run the Application
 
-6. Access the application:
-   Open your browser and navigate to `http://localhost:3000`.
+```bash
+npm start
+```
 
-## Routes
+The application will be running at `http://localhost:3000`.
 
-- `GET /` - Home page
-- `GET /register` - User registration page
-- `GET /login` - User login page
-- `GET /buy` - Buy products page (requires authentication)
-- `GET /sell` - Sell products page (requires authentication)
-- `GET /info` - Information page
-- `GET /crop-safety` - Weather and crop safety information page
-- `GET /about` - About page
-- `GET /fruits` - List of fruits (requires authentication)
-- `GET /vegetables` - List of vegetables (requires authentication)
-- `GET /grains` - List of grains (requires authentication)
-- `GET /my-products` - User's products page (requires authentication)
-- `GET /cart` - User's cart page (requires authentication)
-- `POST /register` - User registration
-- `POST /login` - User login
-- `POST /submit-product` - Submit a new product (requires authentication)
-- `POST /cart/add/:id` - Add item to cart (requires authentication)
-- `GET /auth/google` - Google OAuth authentication
-- `GET /auth/google/callback` - Google OAuth callback
-- `GET /logout` - Logout and clear session
+## API Endpoints
+
+### Authentication
+
+- `POST /signup`: Sign up a new user
+- `POST /login`: Log in an existing user
+
+### Products
+
+- `GET /products`: Get all products
+- `POST /products`: Add a new product
+
+### Cart
+
+- `POST /cart`: Add an item to the cart
+- `GET /cart`: Get all items in the cart
 
 ## Contributing
 
-Feel free to fork the repository, make improvements, and submit pull requests.
-
-## Acknowledgements
-
-- [Express.js](https://expressjs.com/)
-- [PostgreSQL](https://www.postgresql.org/)
-- [Passport.js](http://www.passportjs.org/)
-- [JWT](https://jwt.io/)
-- [bcrypt](https://www.npmjs.com/package/bcrypt)
-- [EJS](https://www.npmjs.com/package/ejs)
+Feel free to open issues or submit pull requests for any improvements or bug fixes.
