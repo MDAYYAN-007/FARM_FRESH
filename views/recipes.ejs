@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+    <link rel="stylesheet" href="/css/style3.css">
+    <title>RECIPE BLOG</title>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <div class="title-email">
+                <h1 class="title">RECIPE BLOG <p class="email">Email: <%= email %>
+                    </p>
+                </h1>
+
+            </div>
+            <a class="close" href="/logout" id="logout-link"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+        </div>
+        <form action="/new/<%= userId %>" method="post">
+            <button class="buttons" id="new-button" type="submit"> New Post </button>
+        </form>
+    </div>
+    <div id="recipe-list">
+        <% content.forEach(element=> { %>
+            <div id="recipe">
+                <h2 id="recipe-name">
+                    <%= element.name %>
+                </h2>
+                <small id="recipe-date">
+                    <%= element.date %>
+                </small>
+                <h3 class="side-headings">Ingredients</h3>
+                <ul class="ing-list">
+                    <% element.ingredients.split("\\n" || "\r\n" ).filter(line=> line.trim().length > 0).forEach(line =>
+                        { %>
+                        <li>
+                            <%= line %>
+                        </li>
+                        <% }); %>
+                </ul>
+                <h3 class="side-headings">Steps</h3>
+                <ol class="stp-list">
+                    <% element.steps.split("\\n").filter(line=> line.trim().length > 0).forEach(line => { %>
+                        <li>
+                            <%= line %>
+                        </li>
+                        <% }); %>
+                </ol>
+                <a class="buttons" id="edit-button" href="/edit/<%= element.id %>">Edit</a>
+                <form action="/delete/<%= element.id %>" method="POST" style="display:inline;">
+                    <button type="submit" class="buttons" id="delete-button"
+                        onclick="return confirm('Are you sure you want to delete this item?');">
+                        Delete
+                    </button>
+                </form>
+            </div>
+            <% }); %>
+    </div>
+
+    <script src="https://kit.fontawesome.com/6c51713392.js" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById('logout-link').addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default action of the link
+            var confirmation = confirm('Are you sure you want to log out?');
+            if (confirmation) {
+                window.location.href = this.href; // Proceed with the logout if confirmed
+            }
+        });
+    </script>
+</body>
+
+</html>

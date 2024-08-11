@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Sofia',sans-serif;
+}
+
+.container{
+    background-image: linear-gradient(to right, 
+        #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%, 
+        #e2c58b 30%, #c2ce9c 64%, #7edbdc 100%);
+    width: 70%;
+    padding: 10px 20px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: max-content;
+}
+
+.container div{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.email{
+    font-size: small;
+    margin-bottom:0 ;
+    color: #fff;
+}
+
+.container div a i{
+    font-size: 35px;
+    margin-top: 36px;
+    margin-right: 20px;
+    color: black;
+}
+
+#recipe-list{
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+    /* max-width: 655px; */
+}
+
+#recipe{
+    background-image: linear-gradient(to right, 
+        #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%, 
+        #e2c58b 30%, #c2ce9c 64%, #7edbdc 100%);
+    padding: 10px 20px;
+    max-width: 630px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+#recipe-date {
+    color: #999;
+    font-family: "Roboto", sans-serif;
+}
+
+.buttons{
+    text-decoration: none;
+    height: 30px;
+    width: 65px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: white;
+    display: inline-flex;
+    cursor: pointer;
+    border: none;
+}
+
+#new-button{
+    background-color: rgb(10, 218, 96);
+    width: 80px;
+    display: flex;
+}
+
+#edit-button{
+    background-color: #3498DB;
+    margin-top: 14px;
+}
+
+#delete-button{
+    background-color: #E74C3C;
+}
+
+#recipe-list{
+    list-style: none;
+    padding-left: 0;
+}
+
+h1{
+    font-size: 2.3em;
+}
+
+h2{
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+h3{
+    margin: 8px 0;
+}
+
+.ing-list{
+    list-style: disc;
+    font-family: "Roboto", sans-serif;
+}
+
+.stp-list{
+    font-family: "Roboto", sans-serif;
+}
+
+/* @media screen and (max-width: 1070px) {
+    .container{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container{
+        width: 65%;
+    }
+} */
+
+@media screen and (max-width: 850px) {
+    .container{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container{
+        width: 86%;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .container{
+        width: 95%;
+        padding: 5px 5px;
+    }
+    .container div h1{
+        font-size: 1.5em;
+    }
+}
